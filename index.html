@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Puzzle Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LOGIC PUZZLE GAMES</h1>
+            <p>Solve logic puzzles like Einstein's test - 6 puzzles, from Beginner to Expert!</p>
+        </header>
+
+        <div class="content">
+            <div class="clues">
+                <h3>CLUES</h3>
+                <div id="cluesList"></div>
+            </div>
+
+            <div class="main-area">
+                <div id="messageBox" class="message"></div>
+
+                <div class="puzzle-grid">
+                    <h3>LOGIC GRID</h3>
+                    <p style="font-size: 0.8em; color: #666; margin-bottom: 12px;">Click any cell to select or change its value.</p>
+                    <div id="gridContainer" class="grid-wrapper"></div>
+                </div>
+
+                <div id="solutionArea"></div>
+            </div>
+
+            <div class="sidebar">
+                <div class="controls">
+                    <h3>CONTROLS</h3>
+                    <button class="control-btn hint" id="hintBtn">HINT</button>
+                    <button class="control-btn reset" id="resetBtn">RESET</button>
+                    <button class="control-btn solve" id="checkBtn">CHECK ANSWER</button>
+                </div>
+
+                <div class="legend">
+                    <h4>LEGEND</h4>
+                    <div class="legend-item">
+                        <div class="legend-box yes"></div>
+                        <span>YES</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-box no"></div>
+                        <span>NO</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-box empty"></div>
+                        <span>Unknown</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-controls">
+            <button class="puzzle-select-btn" id="puzzleSelectBtn">PUZZLES</button>
+            <button class="hint" id="hintBtn2">HINT</button>
+            <button id="resetBtn2">RESET</button>
+            <button id="checkBtn2">CHECK ANSWER</button>
+        </div>
+    </div>
+
+    <div class="puzzle-selector hidden">
+        <h3>SELECT PUZZLE</h3>
+        <button class="puzzle-btn active" data-puzzle="0">1. Colors (Beginner)</button>
+        <button class="puzzle-btn" data-puzzle="1">2. Jobs (Easy)</button>
+        <button class="puzzle-btn" data-puzzle="2">3. Drinks (Medium)</button>
+        <button class="puzzle-btn" data-puzzle="3">4. Animals (Challenging)</button>
+        <button class="puzzle-btn" data-puzzle="4">5. Books (Hard)</button>
+        <button class="puzzle-btn" data-puzzle="5">6. Countries (Expert)</button>
+    </div>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <div id="modalTitle" class="modal-title"></div>
+            <div id="modalOptions" class="modal-options"></div>
+            <button class="modal-close" onclick="closeModal()">CLOSE</button>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="logic.js"></script>
+</body>
+</html>
